@@ -1,30 +1,6 @@
 
 STATISTICS FOR USER U12@DOM1 ON DAY 13
 True Positive: 4
-False Positive: 1295
-False Negative: 0
-True Negative: 10124
-Precision: 0.003079291762894534
-Recall: 1.0
-F1 Score: 0.0061396776669224865
-True Positive Rate: 1.0
-False Positive Rate: 0.1134074787634644
-
-
-STATISTICS FOR USER U12@DOM1 ON DAY 27
-True Positive: 2
-False Positive: 772
-False Negative: 0
-True Negative: 4725
-Precision: 0.002583979328165375
-Recall: 1.0
-F1 Score: 0.005154639175257732
-True Positive Rate: 1.0
-False Positive Rate: 0.14044024013098053
-
-
-STATISTICS FOR USER U12@DOM1 ON DAY 13
-True Positive: 4
 False Positive: 1299
 False Negative: 0
 True Negative: 10120
