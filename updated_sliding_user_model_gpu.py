@@ -72,7 +72,7 @@ def get_data(start, stop):
     # Load first 12 days of data
     data_files = []
     for i in range(start,stop):
-        data_files += ["./data/user_day/redusers_day"+str(i)+".txt",]
+        data_files += ["../data/user_day/redusers_day"+str(i)+".txt",]
     data = []
     for filename in data_files:
         data += load_data(filename)
@@ -98,7 +98,7 @@ def gen_xy(data):
 # In[29]:
 
 
-red = load_data('./data/redteam.txt')
+red = load_data('../data/redteam.txt')
 
 def red_users(data):
     with open(data,'r') as infile:
@@ -118,12 +118,12 @@ def red_users(data):
                 break
     return total_users
 
-redusers = red_users('./data/redteam.txt')
+redusers = red_users('../data/redteam.txt')
 #redusers = ['U9263@DOM1', 'U655@DOM1','U3005@DOM1']
 #print (len(redusers))
 filenames = []
 for i in redusers:
-    filenames += ['./data/online_user/redusers_' + i + '.txt',]
+    filenames += ['../data/online_user/redusers_' + i + '.txt',]
 #print(filenames)
 
 curr_stop = 1
