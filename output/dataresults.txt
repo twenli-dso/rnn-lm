@@ -1,0 +1,746 @@
+
+STATISTICS FOR USER U12@DOM1 ON DAY 13
+True Positive: 4
+False Positive: 1295
+False Negative: 0
+True Negative: 10124
+Precision: 0.003079291762894534
+Recall: 1.0
+F1 Score: 0.0061396776669224865
+True Positive Rate: 1.0
+False Positive Rate: 0.1134074787634644
+
+
+STATISTICS FOR USER U12@DOM1 ON DAY 27
+True Positive: 2
+False Positive: 772
+False Negative: 0
+True Negative: 4725
+Precision: 0.002583979328165375
+Recall: 1.0
+F1 Score: 0.005154639175257732
+True Positive Rate: 1.0
+False Positive Rate: 0.14044024013098053
+
+
+STATISTICS FOR USER U12@DOM1 ON DAY 13
+True Positive: 4
+False Positive: 1299
+False Negative: 0
+True Negative: 10120
+Precision: 0.0030698388334612432
+Recall: 1.0
+F1 Score: 0.00612088752869166
+True Positive Rate: 1.0
+False Positive Rate: 0.11375777213416235
+
+
+STATISTICS FOR USER U12@DOM1 ON DAY 27
+True Positive: 2
+False Positive: 698
+False Negative: 0
+True Negative: 4799
+Precision: 0.002857142857142857
+Recall: 1.0
+F1 Score: 0.005698005698005698
+True Positive Rate: 1.0
+False Positive Rate: 0.12697835182826997
+
+Total Predicted Positives for User U12@DOM1: 6
+Total Actual Positives for User U12@DOM1: 6
+Total False Positives for User U12@DOM1: 1997
+Total False Negatives for User U12@DOM1: 0
+Total True Negatives for User U12@DOM1: 14919
+Total Precision for User U12@DOM1: 0.0029955067398901645
+Total Recall for UserU12@DOM1: 1.0
+Total F1 Score for UserU12@DOM1: 0.005973120955699352
+Total True Positive Rate for UserU12@DOM1: 1.0
+Total False Positive Rate for UserU12@DOM1: 0.11805391345471743
+
+
+STATISTICS FOR USER U1723@DOM1 ON DAY 13
+True Positive: 3
+False Positive: 256
+False Negative: 2
+True Negative: 2725
+Precision: 0.011583011583011582
+Recall: 0.6
+F1 Score: 0.022727272727272724
+True Positive Rate: 0.6
+False Positive Rate: 0.08587722240858772
+
+Total Predicted Positives for User U1723@DOM1: 3
+Total Actual Positives for User U1723@DOM1: 19
+Total False Positives for User U1723@DOM1: 256
+Total False Negatives for User U1723@DOM1: 2
+Total True Negatives for User U1723@DOM1: 2725
+Total Precision for User U1723@DOM1: 0.011583011583011582
+Total Recall for UserU1723@DOM1: 0.6
+Total F1 Score for UserU1723@DOM1: 0.022727272727272724
+Total True Positive Rate for UserU1723@DOM1: 0.6
+Total False Positive Rate for UserU1723@DOM1: 0.08587722240858772
+
+
+STATISTICS FOR USER U4448@DOM1 ON DAY 13
+True Positive: 6
+False Positive: 130
+False Negative: 0
+True Negative: 1390
+Precision: 0.04411764705882353
+Recall: 1.0
+F1 Score: 0.08450704225352114
+True Positive Rate: 1.0
+False Positive Rate: 0.08552631578947369
+
+
+STATISTICS FOR USER U4448@DOM1 ON DAY 14
+True Positive: 1
+False Positive: 94
+False Negative: 0
+True Negative: 967
+Precision: 0.010526315789473684
+Recall: 1.0
+F1 Score: 0.020833333333333332
+True Positive Rate: 1.0
+False Positive Rate: 0.0885956644674835
+
+
+STATISTICS FOR USER U4448@DOM1 ON DAY 27
+True Positive: 1
+False Positive: 74
+False Negative: 0
+True Negative: 930
+Precision: 0.013333333333333334
+Recall: 1.0
+F1 Score: 0.02631578947368421
+True Positive Rate: 1.0
+False Positive Rate: 0.07370517928286853
+
+Total Predicted Positives for User U4448@DOM1: 8
+Total Actual Positives for User U4448@DOM1: 14
+Total False Positives for User U4448@DOM1: 298
+Total False Negatives for User U4448@DOM1: 0
+Total True Negatives for User U4448@DOM1: 3287
+Total Precision for User U4448@DOM1: 0.026143790849673203
+Total Recall for UserU4448@DOM1: 1.0
+Total F1 Score for UserU4448@DOM1: 0.050955414012738856
+Total True Positive Rate for UserU4448@DOM1: 1.0
+Total False Positive Rate for UserU4448@DOM1: 0.08312412831241284
+
+
+STATISTICS FOR USER U5254@DOM1 ON DAY 13
+True Positive: 1
+False Positive: 796
+False Negative: 0
+True Negative: 5089
+Precision: 0.0012547051442910915
+Recall: 1.0
+F1 Score: 0.0025062656641604004
+True Positive Rate: 1.0
+False Positive Rate: 0.1352591333899745
+
+Total Predicted Positives for User U5254@DOM1: 1
+Total Actual Positives for User U5254@DOM1: 3
+Total False Positives for User U5254@DOM1: 796
+Total False Negatives for User U5254@DOM1: 0
+Total True Negatives for User U5254@DOM1: 5089
+Total Precision for User U5254@DOM1: 0.0012547051442910915
+Total Recall for UserU5254@DOM1: 1.0
+Total F1 Score for UserU5254@DOM1: 0.0025062656641604004
+Total True Positive Rate for UserU5254@DOM1: 1.0
+Total False Positive Rate for UserU5254@DOM1: 0.1352591333899745
+
+
+STATISTICS FOR USER U3635@DOM1 ON DAY 13
+True Positive: 3
+False Positive: 35
+False Negative: 0
+True Negative: 608
+Precision: 0.07894736842105263
+Recall: 1.0
+F1 Score: 0.14634146341463414
+True Positive Rate: 1.0
+False Positive Rate: 0.05443234836702955
+
+
+STATISTICS FOR USER U3635@DOM1 ON DAY 14
+True Positive: 2
+False Positive: 252
+False Negative: 0
+True Negative: 2380
+Precision: 0.007874015748031496
+Recall: 1.0
+F1 Score: 0.015625
+True Positive Rate: 1.0
+False Positive Rate: 0.09574468085106383
+
+NO DATA FOR USER U3635@DOM1 ON DAY 32
+NO DATA FOR USER U3635@DOM1 ON DAY 33
+NO DATA FOR USER U3635@DOM1 ON DAY 53
+Total Predicted Positives for User U3635@DOM1: 5
+Total Actual Positives for User U3635@DOM1: 18
+Total False Positives for User U3635@DOM1: 287
+Total False Negatives for User U3635@DOM1: 0
+Total True Negatives for User U3635@DOM1: 2988
+Total Precision for User U3635@DOM1: 0.017123287671232876
+Total Recall for UserU3635@DOM1: 1.0
+Total F1 Score for UserU3635@DOM1: 0.03367003367003367
+Total True Positive Rate for UserU3635@DOM1: 1.0
+Total False Positive Rate for UserU3635@DOM1: 0.08763358778625954
+
+
+STATISTICS FOR USER U2575@DOM1 ON DAY 13
+True Positive: 3
+False Positive: 35
+False Negative: 0
+True Negative: 657
+Precision: 0.07894736842105263
+Recall: 1.0
+F1 Score: 0.14634146341463414
+True Positive Rate: 1.0
+False Positive Rate: 0.05057803468208093
+
+
+STATISTICS FOR USER U2575@DOM1 ON DAY 14
+True Positive: 2
+False Positive: 176
+False Negative: 0
+True Negative: 1744
+Precision: 0.011235955056179775
+Recall: 1.0
+F1 Score: 0.022222222222222223
+True Positive Rate: 1.0
+False Positive Rate: 0.09166666666666666
+
+Total Predicted Positives for User U2575@DOM1: 5
+Total Actual Positives for User U2575@DOM1: 10
+Total False Positives for User U2575@DOM1: 211
+Total False Negatives for User U2575@DOM1: 0
+Total True Negatives for User U2575@DOM1: 2401
+Total Precision for User U2575@DOM1: 0.023148148148148147
+Total Recall for UserU2575@DOM1: 1.0
+Total F1 Score for UserU2575@DOM1: 0.04524886877828054
+Total True Positive Rate for UserU2575@DOM1: 1.0
+Total False Positive Rate for UserU2575@DOM1: 0.08078101071975498
+
+
+STATISTICS FOR USER U4112@DOM1 ON DAY 13
+True Positive: 1
+False Positive: 16
+False Negative: 0
+True Negative: 381
+Precision: 0.058823529411764705
+Recall: 1.0
+F1 Score: 0.1111111111111111
+True Positive Rate: 1.0
+False Positive Rate: 0.04030226700251889
+
+NO DATA FOR USER U4112@DOM1 ON DAY 18
+NO DATA FOR USER U4112@DOM1 ON DAY 19
+NO DATA FOR USER U4112@DOM1 ON DAY 20
+NO DATA FOR USER U4112@DOM1 ON DAY 21
+NO DATA FOR USER U4112@DOM1 ON DAY 23
+NO DATA FOR USER U4112@DOM1 ON DAY 24
+NO DATA FOR USER U4112@DOM1 ON DAY 25
+NO DATA FOR USER U4112@DOM1 ON DAY 26
+NO DATA FOR USER U4112@DOM1 ON DAY 28
+NO DATA FOR USER U4112@DOM1 ON DAY 32
+NO DATA FOR USER U4112@DOM1 ON DAY 33
+NO DATA FOR USER U4112@DOM1 ON DAY 36
+NO DATA FOR USER U4112@DOM1 ON DAY 37
+NO DATA FOR USER U4112@DOM1 ON DAY 38
+NO DATA FOR USER U4112@DOM1 ON DAY 39
+NO DATA FOR USER U4112@DOM1 ON DAY 40
+NO DATA FOR USER U4112@DOM1 ON DAY 46
+NO DATA FOR USER U4112@DOM1 ON DAY 47
+NO DATA FOR USER U4112@DOM1 ON DAY 48
+NO DATA FOR USER U4112@DOM1 ON DAY 52
+NO DATA FOR USER U4112@DOM1 ON DAY 53
+NO DATA FOR USER U4112@DOM1 ON DAY 54
+Total Predicted Positives for User U4112@DOM1: 1
+Total Actual Positives for User U4112@DOM1: 3
+Total False Positives for User U4112@DOM1: 16
+Total False Negatives for User U4112@DOM1: 0
+Total True Negatives for User U4112@DOM1: 381
+Total Precision for User U4112@DOM1: 0.058823529411764705
+Total Recall for UserU4112@DOM1: 1.0
+Total F1 Score for UserU4112@DOM1: 0.1111111111111111
+Total True Positive Rate for UserU4112@DOM1: 1.0
+Total False Positive Rate for UserU4112@DOM1: 0.04030226700251889
+
+
+STATISTICS FOR USER U342@DOM1 ON DAY 13
+True Positive: 4
+False Positive: 359
+False Negative: 0
+True Negative: 3504
+Precision: 0.011019283746556474
+Recall: 1.0
+F1 Score: 0.021798365122615803
+True Positive Rate: 1.0
+False Positive Rate: 0.09293295366295626
+
+
+STATISTICS FOR USER U342@DOM1 ON DAY 27
+True Positive: 1
+False Positive: 68
+False Negative: 0
+True Negative: 1358
+Precision: 0.014492753623188406
+Recall: 1.0
+F1 Score: 0.02857142857142857
+True Positive Rate: 1.0
+False Positive Rate: 0.047685834502103785
+
+NO DATA FOR USER U342@DOM1 ON DAY 46
+NO DATA FOR USER U342@DOM1 ON DAY 47
+NO DATA FOR USER U342@DOM1 ON DAY 48
+NO DATA FOR USER U342@DOM1 ON DAY 52
+NO DATA FOR USER U342@DOM1 ON DAY 53
+NO DATA FOR USER U342@DOM1 ON DAY 54
+Total Predicted Positives for User U342@DOM1: 5
+Total Actual Positives for User U342@DOM1: 12
+Total False Positives for User U342@DOM1: 427
+Total False Negatives for User U342@DOM1: 0
+Total True Negatives for User U342@DOM1: 4862
+Total Precision for User U342@DOM1: 0.011574074074074073
+Total Recall for UserU342@DOM1: 1.0
+Total F1 Score for UserU342@DOM1: 0.02288329519450801
+Total True Positive Rate for UserU342@DOM1: 1.0
+Total False Positive Rate for UserU342@DOM1: 0.08073359803365475
+
+
+STATISTICS FOR USER U13@DOM1 ON DAY 13
+True Positive: 2
+False Positive: 2882
+False Negative: 0
+True Negative: 20520
+Precision: 0.0006934812760055479
+Recall: 1.0
+F1 Score: 0.001386001386001386
+True Positive Rate: 1.0
+False Positive Rate: 0.12315186736176395
+
+Total Predicted Positives for User U13@DOM1: 2
+Total Actual Positives for User U13@DOM1: 2
+Total False Positives for User U13@DOM1: 2882
+Total False Negatives for User U13@DOM1: 0
+Total True Negatives for User U13@DOM1: 20520
+Total Precision for User U13@DOM1: 0.0006934812760055479
+Total Recall for UserU13@DOM1: 1.0
+Total F1 Score for UserU13@DOM1: 0.001386001386001386
+Total True Positive Rate for UserU13@DOM1: 1.0
+Total False Positive Rate for UserU13@DOM1: 0.12315186736176395
+
+
+STATISTICS FOR USER U1289@DOM1 ON DAY 13
+True Positive: 3
+False Positive: 67
+False Negative: 0
+True Negative: 939
+Precision: 0.04285714285714286
+Recall: 1.0
+F1 Score: 0.08219178082191782
+True Positive Rate: 1.0
+False Positive Rate: 0.06660039761431412
+
+Total Predicted Positives for User U1289@DOM1: 3
+Total Actual Positives for User U1289@DOM1: 3
+Total False Positives for User U1289@DOM1: 67
+Total False Negatives for User U1289@DOM1: 0
+Total True Negatives for User U1289@DOM1: 939
+Total Precision for User U1289@DOM1: 0.04285714285714286
+Total Recall for UserU1289@DOM1: 1.0
+Total F1 Score for UserU1289@DOM1: 0.08219178082191782
+Total True Positive Rate for UserU1289@DOM1: 1.0
+Total False Positive Rate for UserU1289@DOM1: 0.06660039761431412
+
+
+STATISTICS FOR USER U218@DOM1 ON DAY 13
+True Positive: 9
+False Positive: 55
+False Negative: 0
+True Negative: 818
+Precision: 0.140625
+Recall: 1.0
+F1 Score: 0.24657534246575344
+True Positive Rate: 1.0
+False Positive Rate: 0.06300114547537228
+
+Total Predicted Positives for User U218@DOM1: 9
+Total Actual Positives for User U218@DOM1: 13
+Total False Positives for User U218@DOM1: 55
+Total False Negatives for User U218@DOM1: 0
+Total True Negatives for User U218@DOM1: 818
+Total Precision for User U218@DOM1: 0.140625
+Total Recall for UserU218@DOM1: 1.0
+Total F1 Score for UserU218@DOM1: 0.24657534246575344
+Total True Positive Rate for UserU218@DOM1: 1.0
+Total False Positive Rate for UserU218@DOM1: 0.06300114547537228
+
+
+STATISTICS FOR USER U3277@C2519 ON DAY 13
+True Positive: 1
+False Positive: 1
+False Negative: 0
+True Negative: 9
+Precision: 0.5
+Recall: 1.0
+F1 Score: 0.6666666666666666
+True Positive Rate: 1.0
+False Positive Rate: 0.1
+
+NO DATA FOR USER U3277@C2519 ON DAY 15
+NO DATA FOR USER U3277@C2519 ON DAY 18
+NO DATA FOR USER U3277@C2519 ON DAY 19
+NO DATA FOR USER U3277@C2519 ON DAY 20
+NO DATA FOR USER U3277@C2519 ON DAY 21
+NO DATA FOR USER U3277@C2519 ON DAY 22
+NO DATA FOR USER U3277@C2519 ON DAY 24
+NO DATA FOR USER U3277@C2519 ON DAY 25
+NO DATA FOR USER U3277@C2519 ON DAY 26
+NO DATA FOR USER U3277@C2519 ON DAY 32
+NO DATA FOR USER U3277@C2519 ON DAY 33
+NO DATA FOR USER U3277@C2519 ON DAY 39
+NO DATA FOR USER U3277@C2519 ON DAY 40
+NO DATA FOR USER U3277@C2519 ON DAY 45
+NO DATA FOR USER U3277@C2519 ON DAY 46
+NO DATA FOR USER U3277@C2519 ON DAY 47
+NO DATA FOR USER U3277@C2519 ON DAY 48
+NO DATA FOR USER U3277@C2519 ON DAY 53
+NO DATA FOR USER U3277@C2519 ON DAY 54
+NO DATA FOR USER U3277@C2519 ON DAY 56
+Total Predicted Positives for User U3277@C2519: 1
+Total Actual Positives for User U3277@C2519: 1
+Total False Positives for User U3277@C2519: 1
+Total False Negatives for User U3277@C2519: 0
+Total True Negatives for User U3277@C2519: 9
+Total Precision for User U3277@C2519: 0.5
+Total Recall for UserU3277@C2519: 1.0
+Total F1 Score for UserU3277@C2519: 0.6666666666666666
+Total True Positive Rate for UserU3277@C2519: 1.0
+Total False Positive Rate for UserU3277@C2519: 0.1
+
+
+STATISTICS FOR USER U1519@DOM1 ON DAY 13
+True Positive: 1
+False Positive: 5
+False Negative: 0
+True Negative: 62
+Precision: 0.16666666666666666
+Recall: 1.0
+F1 Score: 0.2857142857142857
+True Positive Rate: 1.0
+False Positive Rate: 0.07462686567164178
+
+Total Predicted Positives for User U1519@DOM1: 1
+Total Actual Positives for User U1519@DOM1: 1
+Total False Positives for User U1519@DOM1: 5
+Total False Negatives for User U1519@DOM1: 0
+Total True Negatives for User U1519@DOM1: 62
+Total Precision for User U1519@DOM1: 0.16666666666666666
+Total Recall for UserU1519@DOM1: 1.0
+Total F1 Score for UserU1519@DOM1: 0.2857142857142857
+Total True Positive Rate for UserU1519@DOM1: 1.0
+Total False Positive Rate for UserU1519@DOM1: 0.07462686567164178
+
+
+STATISTICS FOR USER U7761@C2519 ON DAY 13
+True Positive: 0
+False Positive: 0
+False Negative: 2
+True Negative: 2
+Precision: 0.0
+Recall: 0.0
+F1 Score: 0.0
+True Positive Rate: 0.0
+False Positive Rate: 0.0
+
+NO DATA FOR USER U7761@C2519 ON DAY 14
+NO DATA FOR USER U7761@C2519 ON DAY 15
+NO DATA FOR USER U7761@C2519 ON DAY 16
+NO DATA FOR USER U7761@C2519 ON DAY 17
+NO DATA FOR USER U7761@C2519 ON DAY 18
+NO DATA FOR USER U7761@C2519 ON DAY 19
+NO DATA FOR USER U7761@C2519 ON DAY 20
+NO DATA FOR USER U7761@C2519 ON DAY 21
+NO DATA FOR USER U7761@C2519 ON DAY 22
+NO DATA FOR USER U7761@C2519 ON DAY 23
+NO DATA FOR USER U7761@C2519 ON DAY 24
+NO DATA FOR USER U7761@C2519 ON DAY 25
+NO DATA FOR USER U7761@C2519 ON DAY 26
+NO DATA FOR USER U7761@C2519 ON DAY 27
+NO DATA FOR USER U7761@C2519 ON DAY 28
+NO DATA FOR USER U7761@C2519 ON DAY 29
+NO DATA FOR USER U7761@C2519 ON DAY 30
+NO DATA FOR USER U7761@C2519 ON DAY 31
+NO DATA FOR USER U7761@C2519 ON DAY 32
+NO DATA FOR USER U7761@C2519 ON DAY 33
+NO DATA FOR USER U7761@C2519 ON DAY 34
+NO DATA FOR USER U7761@C2519 ON DAY 35
+NO DATA FOR USER U7761@C2519 ON DAY 36
+NO DATA FOR USER U7761@C2519 ON DAY 37
+NO DATA FOR USER U7761@C2519 ON DAY 38
+NO DATA FOR USER U7761@C2519 ON DAY 39
+NO DATA FOR USER U7761@C2519 ON DAY 40
+NO DATA FOR USER U7761@C2519 ON DAY 41
+NO DATA FOR USER U7761@C2519 ON DAY 42
+NO DATA FOR USER U7761@C2519 ON DAY 43
+NO DATA FOR USER U7761@C2519 ON DAY 44
+NO DATA FOR USER U7761@C2519 ON DAY 45
+NO DATA FOR USER U7761@C2519 ON DAY 46
+NO DATA FOR USER U7761@C2519 ON DAY 47
+NO DATA FOR USER U7761@C2519 ON DAY 48
+NO DATA FOR USER U7761@C2519 ON DAY 49
+NO DATA FOR USER U7761@C2519 ON DAY 50
+NO DATA FOR USER U7761@C2519 ON DAY 51
+NO DATA FOR USER U7761@C2519 ON DAY 52
+NO DATA FOR USER U7761@C2519 ON DAY 53
+NO DATA FOR USER U7761@C2519 ON DAY 54
+NO DATA FOR USER U7761@C2519 ON DAY 55
+NO DATA FOR USER U7761@C2519 ON DAY 56
+NO DATA FOR USER U7761@C2519 ON DAY 57
+NO DATA FOR USER U7761@C2519 ON DAY 58
+Total Predicted Positives for User U7761@C2519: 0
+Total Actual Positives for User U7761@C2519: 2
+Total False Positives for User U7761@C2519: 0
+Total False Negatives for User U7761@C2519: 2
+Total True Negatives for User U7761@C2519: 2
+Total Precision for User U7761@C2519: 0.0
+Total Recall for UserU7761@C2519: 0.0
+Total F1 Score for UserU7761@C2519: 0.0
+Total True Positive Rate for UserU7761@C2519: 0.0
+Total False Positive Rate for UserU7761@C2519: 0.0
+
+
+STATISTICS FOR USER U7004@C2519 ON DAY 13
+True Positive: 0
+False Positive: 0
+False Negative: 1
+True Negative: 1
+Precision: 0.0
+Recall: 0.0
+F1 Score: 0.0
+True Positive Rate: 0.0
+False Positive Rate: 0.0
+
+NO DATA FOR USER U7004@C2519 ON DAY 14
+NO DATA FOR USER U7004@C2519 ON DAY 15
+NO DATA FOR USER U7004@C2519 ON DAY 16
+NO DATA FOR USER U7004@C2519 ON DAY 17
+NO DATA FOR USER U7004@C2519 ON DAY 18
+NO DATA FOR USER U7004@C2519 ON DAY 19
+NO DATA FOR USER U7004@C2519 ON DAY 20
+NO DATA FOR USER U7004@C2519 ON DAY 21
+NO DATA FOR USER U7004@C2519 ON DAY 22
+NO DATA FOR USER U7004@C2519 ON DAY 23
+NO DATA FOR USER U7004@C2519 ON DAY 24
+NO DATA FOR USER U7004@C2519 ON DAY 25
+NO DATA FOR USER U7004@C2519 ON DAY 26
+NO DATA FOR USER U7004@C2519 ON DAY 27
+NO DATA FOR USER U7004@C2519 ON DAY 28
+NO DATA FOR USER U7004@C2519 ON DAY 29
+NO DATA FOR USER U7004@C2519 ON DAY 30
+NO DATA FOR USER U7004@C2519 ON DAY 31
+NO DATA FOR USER U7004@C2519 ON DAY 32
+NO DATA FOR USER U7004@C2519 ON DAY 33
+NO DATA FOR USER U7004@C2519 ON DAY 34
+NO DATA FOR USER U7004@C2519 ON DAY 35
+NO DATA FOR USER U7004@C2519 ON DAY 36
+NO DATA FOR USER U7004@C2519 ON DAY 37
+NO DATA FOR USER U7004@C2519 ON DAY 38
+NO DATA FOR USER U7004@C2519 ON DAY 39
+NO DATA FOR USER U7004@C2519 ON DAY 40
+NO DATA FOR USER U7004@C2519 ON DAY 41
+NO DATA FOR USER U7004@C2519 ON DAY 42
+NO DATA FOR USER U7004@C2519 ON DAY 43
+NO DATA FOR USER U7004@C2519 ON DAY 44
+NO DATA FOR USER U7004@C2519 ON DAY 45
+NO DATA FOR USER U7004@C2519 ON DAY 46
+NO DATA FOR USER U7004@C2519 ON DAY 47
+NO DATA FOR USER U7004@C2519 ON DAY 48
+NO DATA FOR USER U7004@C2519 ON DAY 49
+NO DATA FOR USER U7004@C2519 ON DAY 50
+NO DATA FOR USER U7004@C2519 ON DAY 52
+NO DATA FOR USER U7004@C2519 ON DAY 53
+NO DATA FOR USER U7004@C2519 ON DAY 54
+NO DATA FOR USER U7004@C2519 ON DAY 55
+NO DATA FOR USER U7004@C2519 ON DAY 56
+NO DATA FOR USER U7004@C2519 ON DAY 57
+NO DATA FOR USER U7004@C2519 ON DAY 58
+Total Predicted Positives for User U7004@C2519: 0
+Total Actual Positives for User U7004@C2519: 1
+Total False Positives for User U7004@C2519: 0
+Total False Negatives for User U7004@C2519: 1
+Total True Negatives for User U7004@C2519: 1
+Total Precision for User U7004@C2519: 0.0
+Total Recall for UserU7004@C2519: 0.0
+Total F1 Score for UserU7004@C2519: 0.0
+Total True Positive Rate for UserU7004@C2519: 0.0
+Total False Positive Rate for UserU7004@C2519: 0.0
+
+
+STATISTICS FOR USER U207@DOM1 ON DAY 13
+True Positive: 2
+False Positive: 26
+False Negative: 0
+True Negative: 800
+Precision: 0.07142857142857142
+Recall: 1.0
+F1 Score: 0.13333333333333333
+True Positive Rate: 1.0
+False Positive Rate: 0.031476997578692496
+
+Total Predicted Positives for User U207@DOM1: 2
+Total Actual Positives for User U207@DOM1: 2
+Total False Positives for User U207@DOM1: 26
+Total False Negatives for User U207@DOM1: 0
+Total True Negatives for User U207@DOM1: 800
+Total Precision for User U207@DOM1: 0.07142857142857142
+Total Recall for UserU207@DOM1: 1.0
+Total F1 Score for UserU207@DOM1: 0.13333333333333333
+Total True Positive Rate for UserU207@DOM1: 1.0
+Total False Positive Rate for UserU207@DOM1: 0.031476997578692496
+
+
+STATISTICS FOR USER U162@DOM1 ON DAY 13
+True Positive: 2
+False Positive: 75
+False Negative: 0
+True Negative: 874
+Precision: 0.025974025974025976
+Recall: 1.0
+F1 Score: 0.05063291139240506
+True Positive Rate: 1.0
+False Positive Rate: 0.07903055848261328
+
+Total Predicted Positives for User U162@DOM1: 2
+Total Actual Positives for User U162@DOM1: 11
+Total False Positives for User U162@DOM1: 75
+Total False Negatives for User U162@DOM1: 0
+Total True Negatives for User U162@DOM1: 874
+Total Precision for User U162@DOM1: 0.025974025974025976
+Total Recall for UserU162@DOM1: 1.0
+Total F1 Score for UserU162@DOM1: 0.05063291139240506
+Total True Positive Rate for UserU162@DOM1: 1.0
+Total False Positive Rate for UserU162@DOM1: 0.07903055848261328
+
+
+STATISTICS FOR USER U1145@DOM1 ON DAY 13
+True Positive: 11
+False Positive: 36
+False Negative: 0
+True Negative: 873
+Precision: 0.23404255319148937
+Recall: 1.0
+F1 Score: 0.37931034482758624
+True Positive Rate: 1.0
+False Positive Rate: 0.039603960396039604
+
+
+STATISTICS FOR USER U1145@DOM1 ON DAY 28
+True Positive: 1
+False Positive: 142
+False Negative: 0
+True Negative: 1585
+Precision: 0.006993006993006993
+Recall: 1.0
+F1 Score: 0.013888888888888888
+True Positive Rate: 1.0
+False Positive Rate: 0.08222350897510133
+
+NO DATA FOR USER U1145@DOM1 ON DAY 53
+NO DATA FOR USER U1145@DOM1 ON DAY 54
+Total Predicted Positives for User U1145@DOM1: 12
+Total Actual Positives for User U1145@DOM1: 12
+Total False Positives for User U1145@DOM1: 178
+Total False Negatives for User U1145@DOM1: 0
+Total True Negatives for User U1145@DOM1: 2458
+Total Precision for User U1145@DOM1: 0.06315789473684211
+Total Recall for UserU1145@DOM1: 1.0
+Total F1 Score for UserU1145@DOM1: 0.11881188118811882
+Total True Positive Rate for UserU1145@DOM1: 1.0
+Total False Positive Rate for UserU1145@DOM1: 0.06752655538694992
+
+
+STATISTICS FOR USER U453@DOM1 ON DAY 13
+True Positive: 2
+False Positive: 357
+False Negative: 0
+True Negative: 3351
+Precision: 0.005571030640668524
+Recall: 1.0
+F1 Score: 0.0110803324099723
+True Positive Rate: 1.0
+False Positive Rate: 0.09627831715210355
+
+Total Predicted Positives for User U453@DOM1: 2
+Total Actual Positives for User U453@DOM1: 2
+Total False Positives for User U453@DOM1: 357
+Total False Negatives for User U453@DOM1: 0
+Total True Negatives for User U453@DOM1: 3351
+Total Precision for User U453@DOM1: 0.005571030640668524
+Total Recall for UserU453@DOM1: 1.0
+Total F1 Score for UserU453@DOM1: 0.0110803324099723
+Total True Positive Rate for UserU453@DOM1: 1.0
+Total False Positive Rate for UserU453@DOM1: 0.09627831715210355
+
+
+STATISTICS FOR USER U1480@DOM1 ON DAY 13
+True Positive: 2
+False Positive: 55
+False Negative: 0
+True Negative: 751
+Precision: 0.03508771929824561
+Recall: 1.0
+F1 Score: 0.06779661016949153
+True Positive Rate: 1.0
+False Positive Rate: 0.06823821339950373
+
+Total Predicted Positives for User U1480@DOM1: 2
+Total Actual Positives for User U1480@DOM1: 12
+Total False Positives for User U1480@DOM1: 55
+Total False Negatives for User U1480@DOM1: 0
+Total True Negatives for User U1480@DOM1: 751
+Total Precision for User U1480@DOM1: 0.03508771929824561
+Total Recall for UserU1480@DOM1: 1.0
+Total F1 Score for UserU1480@DOM1: 0.06779661016949153
+Total True Positive Rate for UserU1480@DOM1: 1.0
+Total False Positive Rate for UserU1480@DOM1: 0.06823821339950373
+
+
+STATISTICS FOR USER U9263@DOM1 ON DAY 13
+True Positive: 4
+False Positive: 240
+False Negative: 0
+True Negative: 1554
+Precision: 0.01639344262295082
+Recall: 1.0
+F1 Score: 0.03225806451612903
+True Positive Rate: 1.0
+False Positive Rate: 0.13377926421404682
+
+
+STATISTICS FOR USER U9263@DOM1 ON DAY 14
+True Positive: 3
+False Positive: 162
+False Negative: 0
+True Negative: 1884
+Precision: 0.01818181818181818
+Recall: 1.0
+F1 Score: 0.03571428571428571
+True Positive Rate: 1.0
+False Positive Rate: 0.07917888563049853
+
+
+STATISTICS FOR USER U9263@DOM1 ON DAY 30
+True Positive: 2
+False Positive: 90
+False Negative: 0
+True Negative: 1268
+Precision: 0.021739130434782608
+Recall: 1.0
+F1 Score: 0.0425531914893617
+True Positive Rate: 1.0
+False Positive Rate: 0.0662739322533137
+
