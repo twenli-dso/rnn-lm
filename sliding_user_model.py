@@ -280,7 +280,7 @@ while counter < len(filenames):
     config = tf.ConfigProto(device_count={'GPU': 1})
      
     # Don't pre-allocate memory; allocate as-needed
-    config.gpu_options.allow_growth = True
+    #config.gpu_options.allow_growth = True
      
     # Only allow a total of half the GPU memory to be allocated
     #config.gpu_options.per_process_gpu_memory_fraction = 0.3
@@ -297,7 +297,7 @@ while counter < len(filenames):
     model.add(Dense(256, activation = 'relu'))
     model.add(Dense(vocab_size, activation = 'softmax'))
     #parallel_model = multi_gpu_model(model, gpus=4)
-    parallel_model = model
+     parallel_model = model
     parallel_model.compile(loss = 'sparse_categorical_crossentropy', optimizer = optim, metrics = ['accuracy'])
     parallel_model.fit(x_train, y_train, epochs = 20, verbose = 1, batch_size = 512, callbacks = [early_stopping])
 
