@@ -341,7 +341,7 @@ while counter < len(filenames):
     avg_ce = np.mean(log_ce)
     #sum_ce = np.sum(log_ce)
     std_dev = np.std(log_ce)
-    threshold = avg_ce + (1.25*std_dev)
+    threshold = avg_ce + (2*std_dev)
 
     true_positive = 0    # Total correct anomalies detected
     anomalies = 0
