@@ -3,12 +3,12 @@ from json.decoder import JSONDecodeError
 from pathlib import Path
 
 import glob, os
-os.chdir("./data/EventLogMonitorMarApr/")
+os.chdir("../data/EventLogMonitorMarApr/")
 
 dict = {}
 for filename in glob.glob("*"):
     print(filename)
-    with open("./data/EventLogMonitorMarApr/%s" % (filename), 'r') as infile:
+    with open("../data/EventLogMonitorMarApr/%s" % (filename), 'r') as infile:
         try:
             for line_num, line in enumerate(infile):
                 line = infile.readline()
@@ -37,7 +37,7 @@ with open ("./dictionary.json", 'w') as outfile:
 security_event_ids = dict['Security']
 security_event_ids_logs = {}
 for filename in glob.glob("*"):
-    with open("./data/EventLogMonitorMarApr/%s" % (filename), 'r') as infile:
+    with open("../data/EventLogMonitorMarApr/%s" % (filename), 'r') as infile:
         try:
             for line_num, line in enumerate(infile):
                 line = infile.readline()
