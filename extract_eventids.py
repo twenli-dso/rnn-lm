@@ -6,7 +6,7 @@ import glob, os
 os.chdir("../data/EventLogMonitorMarApr/")
 
 dict = {}
-for filename in glob.glob("../data/EventLogMonitorMarApr/*"):
+for filename in glob.glob("*"):
     print(filename)
     with open(filename, 'r') as infile:
         try:
