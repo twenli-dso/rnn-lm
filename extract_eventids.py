@@ -3,10 +3,10 @@ from json.decoder import JSONDecodeError
 from pathlib import Path
 
 import glob, os
-os.chdir("../data/EventLogMonitorMarApr/")
+#os.chdir("../data/EventLogMonitorMarApr/")
 
 dict = {}
-for filename in glob.glob("*"):
+for filename in glob.glob("../data/EventLogMonitorMarApr/*"):
     print(filename)
     with open("../data/EventLogMonitorMarApr/%s" % (filename), 'r') as infile:
         try:
