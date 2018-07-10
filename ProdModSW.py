@@ -246,9 +246,9 @@ while testdate <= '20160502':
     anomalies = 0
 
     with open (outfile, 'a') as writefile:
-        writefile.write('Length of log_ce:',len(log_ce),"\n")
-        writefile.write('Length of red:',len(red),"\n")
-        writefile.write('Length of x_test:',len(x_test),"\n")
+        writefile.write('Length of log_ce: %i \n' % len(log_ce))
+        writefile.write('Length of red: %i \n' % len(red))
+        writefile.write('Length of x_test: %i \n' % len(x_test))
     print('Length of log_ce:',len(log_ce))
     print('Length of red:',len(red))
     print('Length of x_test:',len(x_test))
@@ -301,17 +301,17 @@ while testdate <= '20160502':
         false_positive_rate = false_positives / (false_positives+true_negatives)
 
     with open (outfile, 'a') as writefile:
-        writefile.write('No. of Flagged Logs:',total_flagged,"\n")
-        writefile.write('Total No. of Logs:', total_logs,"\n\n")
-        writefile.write('No. of True Positives:',true_positives,"\n")
-        writefile.write('No. of False Positives:',false_positives,"\n")
-        writefile.write('No. of False Negatives:',false_negatives,"\n")
-        writefile.write('No. of True Negatives:',true_negatives,"\n\n")
-        writefile.write('Precision:',precision,"\n")
-        writefile.write('Recall:',recall,"\n")
-        writefile.write('F1 Score:',f1,"\n")
-        writefile.write('True Positive Rate:',true_positive_rate,"\n")
-        writefile.write('False Positive Rate:',false_positive_rate,"\n")
+        writefile.write('No. of Flagged Logs: %i \n' % total_flagged)
+        writefile.write('Total No. of Logs: %i \n\n' % total_logs)
+        writefile.write('No. of True Positives: %i \n' % true_positives)
+        writefile.write('No. of False Positives:  %i \n' % false_positives)
+        writefile.write('No. of False Negatives: %i \n' % false_negatives)
+        writefile.write('No. of True Negatives: %i \n\n' % true_negatives)
+        writefile.write('Precision: %f \n' % precision)
+        writefile.write('Recall: %f \n' % recall)
+        writefile.write('F1 Score: %f \n' % f1)
+        writefile.write('True Positive Rate:  %f \n' % true_positive_rate)
+        writefile.write('False Positive Rate: %f \n' % false_positive_rate)
 
     print('No. of Flagged Logs:',total_flagged)
     print('Total No. of Logs:', total_logs)
