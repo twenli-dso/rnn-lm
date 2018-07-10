@@ -38,7 +38,7 @@ import tensorflow as tf
 from keras import backend as k
 
 notinlist = ['20160407','20160410','20160427']
-
+outfile = "./output/production_results.txt"
 # In[16]:
 
 
@@ -204,6 +204,8 @@ while testdate <= '20160502':
 
     save_model(parallel_model)
 
+    with open (outfile, 'a') as writefile:
+        writefile.write(printline + "\n")
     printline = "\n-- STATISTICS FOR " + str(testdate) + " --\n"
     print(printline)
 
@@ -243,6 +245,10 @@ while testdate <= '20160502':
     threshold = avg_ce + (2*std_dev)
     anomalies = 0
 
+    with open (outfile, 'a') as writefile:
+        writefile.write('Length of log_ce:',len(log_ce),"\n")
+        writefile.write('Length of red:',len(red),"\n")
+        writefile.write('Length of x_test:',len(x_test),"\n")
     print('Length of log_ce:',len(log_ce))
     print('Length of red:',len(red))
     print('Length of x_test:',len(x_test))
@@ -251,6 +257,8 @@ while testdate <= '20160502':
         if log_ce[count] > threshold:
             if red[count] == '1':
                 true_positives += 1
+             with open (outfile, 'a') as writefile:
+                writefile.write('ANOMALY DETECTED:\n')
             print('ANOMALY DETECTED:')
             xline = []
             for i in x_test[count][-1]:
@@ -258,6 +266,9 @@ while testdate <= '20160502':
                     xline += [str(reverse_word_map[i]),]
                 except KeyError:
                     continue
+
+            with open (outfile, 'a') as writefile:
+                writefile.write(' '.join(xline) + '\n')
             print(' '.join(xline) + '\n')
             anomalies += 1
 
@@ -288,6 +299,19 @@ while testdate <= '20160502':
         false_positive_rate = 0
     else:
         false_positive_rate = false_positives / (false_positives+true_negatives)
+
+     with open (outfile, 'a') as writefile:
+        writefile.write('No. of Flagged Logs:',total_flagged,"\n")
+        writefile.write('Total No. of Logs:', total_logs,"\n\n")
+        writefile.write('No. of True Positives:',true_positives,"\n")
+        writefile.write('No. of False Positives:',false_positives,"\n")
+        writefile.write('No. of False Negatives:',false_negatives,"\n")
+        writefile.write('No. of True Negatives:',true_negatives,"\n\n")
+        writefile.write('Precision:',precision,"\n")
+        writefile.write('Recall:',recall,"\n")
+        writefile.write('F1 Score:',f1,"\n")
+        writefile.write('True Positive Rate:',true_positive_rate,"\n")
+        writefile.write('False Positive Rate:',false_positive_rate,"\n")
 
     print('No. of Flagged Logs:',total_flagged)
     print('Total No. of Logs:', total_logs)
