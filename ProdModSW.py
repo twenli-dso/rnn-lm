@@ -204,9 +204,9 @@ while testdate <= '20160502':
 
     save_model(parallel_model)
 
+    printline = "\n-- STATISTICS FOR " + str(testdate) + " --\n"
     with open (outfile, 'a') as writefile:
         writefile.write(printline + "\n")
-    printline = "\n-- STATISTICS FOR " + str(testdate) + " --\n"
     print(printline)
 
     def CrossEntropy(y):
