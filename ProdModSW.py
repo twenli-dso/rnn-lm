@@ -257,7 +257,7 @@ while testdate <= '20160502':
         if log_ce[count] > threshold:
             if red[count] == '1':
                 true_positives += 1
-             with open (outfile, 'a') as writefile:
+            with open (outfile, 'a') as writefile:
                 writefile.write('ANOMALY DETECTED:\n')
             print('ANOMALY DETECTED:')
             xline = []
@@ -300,7 +300,7 @@ while testdate <= '20160502':
     else:
         false_positive_rate = false_positives / (false_positives+true_negatives)
 
-     with open (outfile, 'a') as writefile:
+    with open (outfile, 'a') as writefile:
         writefile.write('No. of Flagged Logs:',total_flagged,"\n")
         writefile.write('Total No. of Logs:', total_logs,"\n\n")
         writefile.write('No. of True Positives:',true_positives,"\n")
