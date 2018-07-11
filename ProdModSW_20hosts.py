@@ -181,16 +181,16 @@ while testdate <= '20160502':
 
     ###################################
     # TensorFlow wizardry
-    config = tf.ConfigProto()
+    #config = tf.ConfigProto()
 
     # Don't pre-allocate memory; allocate as-needed
-    config.gpu_options.allow_growth = True
+    #config.gpu_options.allow_growth = True
 
     # Only allow a total of half the GPU memory to be allocated
     #config.gpu_options.per_process_gpu_memory_fraction = 0.25
 
     # Create a session with the above options specified.
-    k.tensorflow_backend.set_session(tf.Session(config=config))
+    #k.tensorflow_backend.set_session(tf.Session(config=config))
     ###################################
 
     tf.global_variables_initializer()
@@ -200,10 +200,10 @@ while testdate <= '20160502':
     model.add(Bidirectional(LSTM(256)))
     model.add(Dense(256, activation = 'relu'))
     model.add(Dense(vocab_size, activation = 'softmax'))
-    #parallel_model = model
-    parallel_model = multi_gpu_model(model, gpus=4)
+    parallel_model = model
+    #parallel_model = multi_gpu_model(model, gpus=4)
     parallel_model.compile(loss = 'sparse_categorical_crossentropy', optimizer = optim, metrics = ['accuracy'])
-    parallel_model.fit(x_train, y_train, epochs = 10, verbose = 1, batch_size = 4096, callbacks = [early_stopping])
+    parallel_model.fit(x_train, y_train, epochs = 5, verbose = 1, batch_size = 4096, callbacks = [early_stopping])
 
     save_model(parallel_model)
 
