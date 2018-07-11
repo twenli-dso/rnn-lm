@@ -193,14 +193,14 @@ while testdate <= '20160502':
     tf.global_variables_initializer()
 
     model = Sequential()
-    model.add(Embedding(vocab_size, 300, input_length = max_len-1))
+    model.add(Embedding(vocab_size, 100, input_length = max_len-1))
     model.add(Bidirectional(LSTM(256)))
     model.add(Dense(256, activation = 'relu'))
     model.add(Dense(vocab_size, activation = 'softmax'))
     parallel_model = model
     #parallel_model = multi_gpu_model(model, gpus=4)
     parallel_model.compile(loss = 'sparse_categorical_crossentropy', optimizer = optim, metrics = ['accuracy'])
-    parallel_model.fit(x_train, y_train, epochs = 5, verbose = 1, batch_size = 4096, callbacks = [early_stopping])
+    parallel_model.fit(x_train, y_train, epochs = 3, verbose = 1, batch_size = 512, callbacks = [early_stopping])
 
     save_model(parallel_model)
 
