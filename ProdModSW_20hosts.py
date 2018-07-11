@@ -67,7 +67,7 @@ def seq_gen(data,min_len):
     for line in data:
         encoded = tokeniser.texts_to_sequences([line])[0]           # Gives each log line in encoded format
         for i in range(min_len-1, len(encoded)):                    # Splits each log line into lines of size 2 to max_len
-            sequence = encoded[:i+1]""
+            sequence = encoded[:i+1]
             sequences.append(sequence)
     return sequences
 
