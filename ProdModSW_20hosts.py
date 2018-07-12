@@ -334,8 +334,8 @@ while testdate <= '20160502':
         writefile.write('False Positive Rate: %f \n\n' % false_positive_rate)
         writefile.write('True Positive Hosts: %i \n' % true_positive_hosts)
         writefile.write('False Positive Hosts: %i \n' % false_positive_hosts)
-        writefile.write('Flagged red hosts: '.join(flagged_red_hosts) + '\n')
-        writefile.write('Flagged non-red hosts: '.join(flagged_non_red_hosts) + '\n')
+        writefile.write('Flagged red hosts: %s \n' % ','.join(flagged_red_hosts))
+        writefile.write('Flagged non-red hosts: %s \n' % ','.join(flagged_non_red_hosts))
 
     print('No. of Flagged Logs:',total_flagged)
     print('Total No. of Logs:', total_logs)
@@ -353,8 +353,8 @@ while testdate <= '20160502':
     print('')
     print('True Positive Hosts:',true_positive_hosts)
     print('False Positive Hosts:',false_positive_hosts)
-    print('Flagged red hosts: '.join(flagged_red_hosts) + '\n')
-    print('Flagged non-red hosts: '.join(flagged_non_red_hosts) + '\n')
+    print('Flagged red hosts: %s \n' % ','.join(flagged_red_hosts))
+    print('Flagged non-red hosts: %s \n' % ','.join(flagged_non_red_hosts))
 
     startdate = end_date_gen(startdate,1)
     testdate = end_date_gen(testdate,1)
