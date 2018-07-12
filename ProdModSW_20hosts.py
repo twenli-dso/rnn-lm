@@ -38,7 +38,7 @@ import tensorflow as tf
 from keras import backend as k
 
 #notinlist = ['20160407','20160410','20160427']
-outfile = "./output/production_results_21hosts.txt"
+outfile = "./output/production_results_21hosts_updated.txt"
 # In[16]:
 
 red_hosts = ["T029-787","TLM83-15005823","DE5450-15006304","LX250-15006650","LX250-15006668",'VM-CSL-01', 'VM-CSL-02', 'VM-CSL-03']
@@ -223,6 +223,8 @@ while testdate <= '20160502':
     true_positives = 0
     true_positive_hosts = 0
     false_positive_hosts = 0
+    flagged_red_hosts = []
+    flagged_non_red_hosts = []
 
     print ('Total number of logs to process:',len(x_test))
 
@@ -276,8 +278,12 @@ while testdate <= '20160502':
             flagged_host = xline[1]
             if flagged_host in red_hosts:
                 true_positive_hosts += 1
+                if flagged_host not in flagged_red_hosts:
+                    flagged_red_hosts += [flagged_host,]
             else:
                 false_positive_hosts += 1
+                if flagged_host not in flagged_non_red_hosts:
+                    flagged_non_red_hosts += [flagged_host,]
 
             with open (outfile, 'a') as writefile:
                 writefile.write(' '.join(xline) + '\n')
@@ -325,9 +331,11 @@ while testdate <= '20160502':
         writefile.write('Recall: %f \n' % recall)
         writefile.write('F1 Score: %f \n' % f1)
         writefile.write('True Positive Rate:  %f \n' % true_positive_rate)
-        writefile.write('False Positive Rate: %f \n' % false_positive_rate)
+        writefile.write('False Positive Rate: %f \n\n' % false_positive_rate)
         writefile.write('True Positive Hosts: %i \n' % true_positive_hosts)
         writefile.write('False Positive Hosts: %i \n' % false_positive_hosts)
+        writefile.write('Flagged red hosts: '.join(flagged_red_hosts) + '\n')
+        writefile.write('Flagged non-red hosts: '.join(flagged_non_red_hosts) + '\n')
 
     print('No. of Flagged Logs:',total_flagged)
     print('Total No. of Logs:', total_logs)
@@ -342,8 +350,11 @@ while testdate <= '20160502':
     print('F1 Score:',f1)
     print('True Positive Rate:',true_positive_rate)
     print('False Positive Rate:',false_positive_rate)
+    print('')
     print('True Positive Hosts:',true_positive_hosts)
     print('False Positive Hosts:',false_positive_hosts)
+    print('Flagged red hosts: '.join(flagged_red_hosts) + '\n')
+    print('Flagged non-red hosts: '.join(flagged_non_red_hosts) + '\n')
 
     startdate = end_date_gen(startdate,1)
     testdate = end_date_gen(testdate,1)
