@@ -38,9 +38,10 @@ import tensorflow as tf
 from keras import backend as k
 
 #notinlist = ['20160407','20160410','20160427']
-outfile = "./output/production_results_20hosts.txt"
+outfile = "./output/production_results_21hosts.txt"
 # In[16]:
 
+red_hosts = ["T029-787","TLM83-15005823","DE5450-15006304","LX250-15006650","LX250-15006668",'VM-CSL-01', 'VM-CSL-02', 'VM-CSL-03']
 
 def load_data(filename):
     twenty_hosts = ["T029-787","TLM83-15005823","DE5450-15006304","LX250-15006650","LX250-15006668",'VM-CSL-01', 'VM-CSL-02', 'VM-CSL-03',"TLM83-15005832","LX250-15006645", "DE5450-15006348","LX250-15006652","TLM83-15005825", "DE5450-15006348", "TLM83-15005832","DE5440-008388","LX250-15006643","VM-CSL-04","T029-787","T062-253","DE5450-15006328"]
@@ -220,6 +221,8 @@ while testdate <= '20160502':
     ce = 0
     #counter = 0
     true_positives = 0
+    true_positive_hosts = 0
+    false_positive_hosts = 0
 
     print ('Total number of logs to process:',len(x_test))
 
@@ -270,10 +273,18 @@ while testdate <= '20160502':
                 except KeyError:
                     continue
 
+            flagged_host = xline[1]
+            if flagged_host in red_hosts:
+                true_positive_hosts += 1
+            else:
+                false_positive_hosts += 1
+
             with open (outfile, 'a') as writefile:
                 writefile.write(' '.join(xline) + '\n')
             print(' '.join(xline) + '\n')
             anomalies += 1
+        
+        
 
     total_flagged = anomalies
     total_logs = len(x_test)
@@ -315,6 +326,8 @@ while testdate <= '20160502':
         writefile.write('F1 Score: %f \n' % f1)
         writefile.write('True Positive Rate:  %f \n' % true_positive_rate)
         writefile.write('False Positive Rate: %f \n' % false_positive_rate)
+        writefile.write('True Positive Hosts: %i \n' % true_positive_hosts)
+        writefile.write('False Positive Hosts: %i \n' % false_positive_hosts)
 
     print('No. of Flagged Logs:',total_flagged)
     print('Total No. of Logs:', total_logs)
@@ -329,6 +342,8 @@ while testdate <= '20160502':
     print('F1 Score:',f1)
     print('True Positive Rate:',true_positive_rate)
     print('False Positive Rate:',false_positive_rate)
+    print('True Positive Hosts:',true_positive_hosts)
+    print('False Positive Hosts:',false_positive_hosts)
 
     startdate = end_date_gen(startdate,1)
     testdate = end_date_gen(testdate,1)
