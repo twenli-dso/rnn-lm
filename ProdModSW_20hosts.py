@@ -37,13 +37,13 @@ from keras.callbacks import ModelCheckpoint
 import tensorflow as tf
 from keras import backend as k
 
-notinlist = ['20160407','20160410','20160427']
-outfile = "./output/production_results.txt"
+#notinlist = ['20160407','20160410','20160427']
+outfile = "./output/production_results_20hosts.txt"
 # In[16]:
 
 
 def load_data(filename):
-    twenty_hosts = ["T029-787","TLM83-15005823","DE5450-15006304","LX250-15006650","TLM83-15005832","LX250-15006645", "DE5450-15006348","LX250-15006652","TLM83-15005825", "DE5450-15006348", "TLM83-15005832","DE5440-008388","LX250-15006643",'VM-CSL-01', 'VM-CSL-02', 'VM-CSL-03',"VM-CSL-04","T029-787","T062-253","DE5450-15006328"]
+    twenty_hosts = ["T029-787","TLM83-15005823","DE5450-15006304","LX250-15006650","LX250-15006668",'VM-CSL-01', 'VM-CSL-02', 'VM-CSL-03',"TLM83-15005832","LX250-15006645", "DE5450-15006348","LX250-15006652","TLM83-15005825", "DE5450-15006348", "TLM83-15005832","DE5440-008388","LX250-15006643","VM-CSL-04","T029-787","T062-253","DE5450-15006328"]
 
     total = []
     
@@ -181,16 +181,16 @@ while testdate <= '20160502':
 
     ###################################
     # TensorFlow wizardry
-    #config = tf.ConfigProto()
+    config = tf.ConfigProto()
 
     # Don't pre-allocate memory; allocate as-needed
-    #config.gpu_options.allow_growth = True
+    config.gpu_options.allow_growth = True
 
     # Only allow a total of half the GPU memory to be allocated
-    #config.gpu_options.per_process_gpu_memory_fraction = 0.25
+    config.gpu_options.per_process_gpu_memory_fraction = 0.25
 
     # Create a session with the above options specified.
-    #k.tensorflow_backend.set_session(tf.Session(config=config))
+    k.tensorflow_backend.set_session(tf.Session(config=config))
     ###################################
 
     tf.global_variables_initializer()
@@ -200,8 +200,8 @@ while testdate <= '20160502':
     model.add(Bidirectional(LSTM(256)))
     model.add(Dense(256, activation = 'relu'))
     model.add(Dense(vocab_size, activation = 'softmax'))
-    parallel_model = model
-    #parallel_model = multi_gpu_model(model, gpus=4)
+    #parallel_model = model
+    parallel_model = multi_gpu_model(model, gpus=4)
     parallel_model.compile(loss = 'sparse_categorical_crossentropy', optimizer = optim, metrics = ['accuracy'])
     parallel_model.fit(x_train, y_train, epochs = 5, verbose = 1, batch_size = 512, callbacks = [early_stopping])
 
