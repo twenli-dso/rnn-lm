@@ -88,14 +88,14 @@ def data_gen(start_date,numdays):
     i = 1
     day = start_date
     while i <= numdays:
-        if day in notinlist:
-            day = end_date_gen(day,1)
-            continue
-        else:
-            dayurl = '../extract_features/output/data_security_' + day + '.txt'
-            fulldata += load_data(dayurl)
-            day = end_date_gen(day,1)
-            i += 1
+        #if day in notinlist:
+            #day = end_date_gen(day,1)
+            #continue
+        #else:
+        dayurl = '../extract_features/output/data_security_' + day + '.txt'
+        fulldata += load_data(dayurl)
+        day = end_date_gen(day,1)
+        i += 1
     return fulldata
 
 # In[19]:
