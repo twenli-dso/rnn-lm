@@ -206,7 +206,7 @@ while testdate <= '20160502':
     parallel_model.compile(loss = 'sparse_categorical_crossentropy', optimizer = optim, metrics = ['accuracy'])
     parallel_model.fit(x_train, y_train, epochs = 5, verbose = 1, batch_size = 512, callbacks = [early_stopping])
 
-    save_model(parallel_model)
+    #save_model(parallel_model)
 
     printline = "\n-- STATISTICS FOR " + str(testdate) + " --\n"
     with open (outfile, 'a') as writefile:
