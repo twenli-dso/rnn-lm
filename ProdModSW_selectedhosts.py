@@ -38,7 +38,7 @@ import tensorflow as tf
 from keras import backend as k
 
 #notinlist = ['20160407','20160410','20160427']
-outfile = "./output/production_results_21hosts_updated.txt"
+outfile = "./output/production_results_28hosts.txt"
 # In[16]:
 
 red_hosts = ["T029-787","TLM83-15005823","DE5450-15006304","LX250-15006650","LX250-15006668",'VM-CSL-01', 'VM-CSL-02', 'VM-CSL-03']
