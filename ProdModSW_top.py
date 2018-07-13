@@ -109,7 +109,7 @@ testdate = end_date_gen(startdate,6)
 
 while testdate <= '20160502':
 
-    train_data = data_gen(startdate,4)
+    train_data = data_gen(startdate,6)
     test_data = data_gen(testdate,1)
     total_data = train_data + test_data
 
