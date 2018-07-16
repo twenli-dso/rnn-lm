@@ -27,7 +27,6 @@ for url in file_list:
             while True:
                 try:
                     data = data_file.readline().strip()
-                    print(data)
                     if data == '':
                         break
                     d = json.loads(data)
@@ -46,9 +45,9 @@ for url in file_list:
                             allhosts[hostname] = {logtime:[eventid,]}
                         traincounter += 1
 
-                        if traincounter%10000 == 1:
-                            print('Current length:', traincounter)
-                            #print(allhosts)
+                    if traincounter%10000 == 1:
+                        print('Current length:', traincounter)
+                        #print(allhosts)
                             
                 except KeyError:
                     continue
