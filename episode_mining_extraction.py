@@ -4,7 +4,7 @@ import re
 import os
 import glob
 
-file_list = glob.glob(os.path.join('../extract_features/output/','*'))
+file_list = glob.glob(os.path.join('../data/EventLogMonitorMarApr/','*'))
 #, '*'
 #test_list = glob.glob(os.path.join(os.getcwd(),'TestData'))
 #print(os.path.join(os.getcwd(),'TrainData', '*'))
