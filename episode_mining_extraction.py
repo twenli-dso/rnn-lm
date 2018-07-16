@@ -22,12 +22,12 @@ def end_date_gen(start_date,numdays):
 #file_list = ['1457598574988-1_2016-03-10']
 
 for url in file_list:
-    print(url)
     try:
         with open(url) as data_file:
             while True:
                 try:
                     data = data_file.readline().strip()
+                    print(data)
                     if data == '':
                         break
                     d = json.loads(data)
