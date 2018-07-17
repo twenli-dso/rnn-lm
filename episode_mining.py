@@ -293,7 +293,7 @@ while testdate <= '20160502':
     else:
         false_positive_rate = false_positives / (false_positives+true_negatives)
 
-    missed_red_hosts = [host for host in appearing_red_hosts if host not in flagged_red_host]
+    missed_red_hosts = [host for host in appearing_red_hosts if host not in flagged_red_hosts]
     with open (outfile, 'a') as writefile:
         writefile.write('No. of Flagged Users: %i \n' % total_flagged)
         writefile.write('Total No. of Users: %i \n\n' % total_logs)
