@@ -196,11 +196,10 @@ while testdate <= '20160502':
     loss = 0
     ce = 0
 
-    print ('Total number of logs to process:',len(x_test))
+    print ('Total number of user-sequences to process:',len(x_test))
 
     for log in range(len(x_test)):
-        if log % 1000 == 0:
-            print ('Currently processing log',log)
+        print ('Currently processing user-sequence',log)
         ypred = parallel_model.predict(x_test[log])
         correct = y_test[log]
         loss = 0
@@ -268,6 +267,7 @@ while testdate <= '20160502':
     total_flagged = len(flagged_red_hosts) + len(flagged_non_red_hosts)
     total_logs = len(x_test)
 
+    true_positives = len(flagged_red_hosts)
     false_positives = len(flagged_non_red_hosts)
     false_negatives = len(appearing_red_hosts)-len(flagged_red_hosts)
     true_negatives = total_logs-false_positives
@@ -310,8 +310,8 @@ while testdate <= '20160502':
         writefile.write('Flagged non-red hosts: %s \n' % ','.join(flagged_non_red_hosts))
         writefile.write('Missed red hosts: %s \n' % ','.join(missed_red_hosts))
     
-    print('No. of Flagged Logs:',total_flagged)
-    print('Total No. of Logs:', total_logs)
+    print('No. of Flagged Users:',total_flagged)
+    print('Total No. of Users:', total_logs)
     print('')
     print('No. of True Positives:',true_positives)
     print('No. of False Positives:',false_positives)
