@@ -78,8 +78,7 @@ def data_gen(start_date,numdays):
         i += 1
     return fulldata
 
-def gen_xy(data, max_num_seq):
-    min_len = 10
+def gen_xy(data, min_len, max_num_seq):
     sequences = seq_gen(data, min_len, max_num_seq)
     sequences = pad_sequences(sequences, maxlen = max_num_seq, padding = 'pre')
     sequences = array(sequences)
@@ -125,12 +124,12 @@ testdate = end_date_gen(startdate,num_training_days)
 while testdate <= '20160502':
     
     #load training and testing data (users with sequence of event ids)
-    train_data = data_gen(startdate,num_training_days) #replace 1 with num_training_days
+    train_data = data_gen(startdate,num_training_days)
     test_data = data_gen(testdate,1)
     total_data = train_data + test_data
 
-    print('Number of training users:',len(train_data))
-    print('Number of testing users:',len(test_data))
+    print('Number of training user-sequences:',len(train_data))
+    print('Number of testing user-sequences:',len(test_data))
     
     #check if there is testing data
     if len(test_data) == 0:
@@ -156,11 +155,14 @@ while testdate <= '20160502':
     for sequence in train_sequences:
         total_len += len(sequence)
     avg_len = total_len/len(train_sequences)
-    max_len = int(avg_len)
+    print("Avg number of event ids per user: ", avg_len)
     
+    max_len = int(avg_len)
+    min_len = 10 #min sequence length for sliding window, not sure how to decide
+
     #generate training sequences with sliding window
-    x_train, y_train = gen_xy(train_sequences, max_len)
-    print(x_train)
+    x_train, y_train = gen_xy(train_sequences, min_len, max_len)
+    #print(x_train)
     
     #train model
     model = train_model(x_train, y_train, 10, 128)
@@ -168,7 +170,7 @@ while testdate <= '20160502':
     #generate test sequences
     sliding_test_sequences = []
     for log in test_sequences:
-        test_sequence = seq_gen([log,],10,max_len)
+        test_sequence = seq_gen([log,],min_len,max_len)
         test_sequence = pad_sequences(test_sequence, maxlen = max_len, padding = 'pre')
         sliding_test_sequences += [test_sequence,]
     sliding_test_sequences = array(sliding_test_sequences)
@@ -191,8 +193,8 @@ while testdate <= '20160502':
     print ('Total number of logs to process:',len(x_test))
 
     for log in range(len(x_test)):
-        #if log % 1000 == 0:
-            #print ('Currently processing log',log)
+        if log % 1000 == 0:
+            print ('Currently processing log',log)
         ypred = parallel_model.predict(x_test[log])
         correct = y_test[log]
         loss = 0
@@ -219,6 +221,11 @@ while testdate <= '20160502':
     
     #determine anomalies
     outfile = "./results/flagged_lines.txt"
+    printline = "\n-- STATISTICS FOR " + str(testdate) + " --\n"
+    with open (outfile, 'a') as writefile:
+        writefile.write(printline + "\n")
+    print(printline)
+
     for count in range(len(log_ce)):
         if log_ce[count] > threshold:
             user = test_users[count]
