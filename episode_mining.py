@@ -165,7 +165,7 @@ while testdate <= '20160502':
     #print(x_train)
     
     #train model
-    model = train_model(x_train, y_train, 5, 8192)
+    model = train_model(x_train, y_train, 5, 1024)
     
     #generate test sequences
     sliding_test_sequences = []
