@@ -118,7 +118,7 @@ def train_model(x_train, y_train, num_epochs, batch_size):
     return parallel_model
 
 startdate = '20160408'
-num_training_days = 6
+num_training_days = 3
 testdate = end_date_gen(startdate,num_training_days)
 
 while testdate <= '20160502':
