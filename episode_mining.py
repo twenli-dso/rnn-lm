@@ -155,7 +155,7 @@ while testdate <= '20160502':
     for sequence in train_sequences:
         total_len += len(sequence)
     avg_len = total_len/len(train_sequences)
-    print("Avg number of event ids per user: ", avg_len)
+    print("Avg number of event ids per user per day: ", avg_len)
     
     max_len = int(avg_len)
     min_len = 10 #min sequence length for sliding window, not sure how to decide
@@ -165,7 +165,7 @@ while testdate <= '20160502':
     #print(x_train)
     
     #train model
-    model = train_model(x_train, y_train, 10, 128)
+    model = train_model(x_train, y_train, 5, 8192)
     
     #generate test sequences
     sliding_test_sequences = []
