@@ -168,10 +168,10 @@ while testdate <= '20160502':
 
     #generate training sequences with sliding window
     x_train, y_train = gen_xy(train_sequences, min_len, max_len)
-    #print(x_train)
+    print("Length of x_train: ", len(x_train))
     
     #train model
-    parallel_model = train_model(x_train, y_train, 5, 1024)
+    parallel_model = train_model(x_train, y_train, 5, 512)
     
     #generate test sequences
     sliding_test_sequences = []
@@ -221,8 +221,8 @@ while testdate <= '20160502':
     std_dev = np.std(log_ce)
     threshold = avg_ce + (2*std_dev)
 
-    print(avg_ce)
-    print(threshold)
+    #print(avg_ce)
+    #print(threshold)
     
     #determine anomalies
     flagged_red_hosts = []
