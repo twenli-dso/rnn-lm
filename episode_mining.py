@@ -156,7 +156,7 @@ while testdate <= '20160502':
     for sequence in train_sequences:
         total_len += len(sequence)
     avg_len = total_len/len(train_sequences)
-    max_len = int(avg_length)
+    max_len = int(avg_len)
     
     #generate training sequences with sliding window
     x_train, y_train = gen_xy(train_sequences, max_len)
