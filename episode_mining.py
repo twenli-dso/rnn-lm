@@ -26,7 +26,10 @@ import tensorflow as tf
 from keras import backend as k
 import datetime
 
+red_hosts = ["T029-787","TLM83-15005823","DE5450-15006304","LX250-15006650","LX250-15006668",'VM-CSL-01', 'VM-CSL-02', 'VM-CSL-03']
+
 def load_data(filename):
+    selected_hosts = ['DE5450-15006304', 'VM-CSL-07', 'TLM93P-14014366', 'VM-CSL-10', 'TLM83-15005825', 'VM-CSL-03', 'DE5440-008388', 'VM-CSL-05', 'VM-CSL-11', 'TLM93P-14014370', 'T029-787', 'VM-CSL-01', 'VM-CSL-09', 'T029-449', 'VM-CSL-08', 'TLM83-15005832', 'TLM72-016266', 'VM-CSL-06', 'DE5450-15006348', 'VM-WIN7-03', 'VM-CSL-12', 'VM-CSL-02', 'VM-CSL-04', 'TLM72-016270', 'VM-WIN7-04', 'TLM83-15005823','LX250-15006650','LX250-15006668']
     total = []
     
     # Open and read file
@@ -38,13 +41,16 @@ def load_data(filename):
     data = data.split('\n')
     for i in data:
         i = i.split(':')
-        if i[0] == '':
+        host = i[0]
+        if host == '':
             continue
-        total += [i,]
+        if host in selected_hosts:
+            total += [i,]
     for j in total:
         j[-1] = j[-1].split(',')
         
     return total
+
 
 def seq_gen(data, min_len, max_num_seq):
     sequences = []
@@ -165,7 +171,7 @@ while testdate <= '20160502':
     #print(x_train)
     
     #train model
-    model = train_model(x_train, y_train, 5, 1024)
+    parallel_model = train_model(x_train, y_train, 5, 1024)
     
     #generate test sequences
     sliding_test_sequences = []
@@ -220,6 +226,9 @@ while testdate <= '20160502':
     print(threshold)
     
     #determine anomalies
+    flagged_red_hosts = []
+    flagged_non_red_hosts = []
+
     outfile = "./results/flagged_lines.txt"
     printline = "\n-- STATISTICS FOR " + str(testdate) + " --\n"
     with open (outfile, 'a') as writefile:
@@ -229,6 +238,11 @@ while testdate <= '20160502':
     for count in range(len(log_ce)):
         if log_ce[count] > threshold:
             user = test_users[count]
+            if user in red_hosts:
+                flagged_red_hosts += [user,]
+            else:
+                flagged_non_red_hosts += [user,]
+
             xline = []
             for i in x_test[count][-1]:
                 try:
@@ -244,6 +258,76 @@ while testdate <= '20160502':
             print('User:%s\n'%(user))
             print(' '.join(xline) + '\n')
     
+    #calculate statistics
+    appearing_red_hosts = []
+    for user in test_user:
+        for red_host in red_hosts:
+            if user == red_host:
+                appearing_red_hosts += [red_host,]
+
+    total_flagged = len(flagged_red_hosts) + len(flagged_non_red_hosts)
+    total_logs = len(x_test)
+
+    false_positives = flagged_non_red_hosts
+    false_negatives = len(appearing_red_hosts)-flagged_red_hosts
+    true_negatives = total_logs-false_positives
+
+    if true_positives+false_positives == 0:
+        precision = 0.0
+    else:
+        precision = true_positives/(true_positives + false_positives)
+
+    if true_positives+false_negatives == 0:
+        recall = 0.0
+    else:
+        recall = true_positives/(true_positives+false_negatives)
+
+    if precision == 0 or recall == 0:
+        f1 = 0.0
+    else:
+        f1 = 2/((1/precision)+(1/recall))
+
+    true_positive_rate = recall
+    if false_positives+true_negatives == 0:
+        false_positive_rate = 0
+    else:
+        false_positive_rate = false_positives / (false_positives+true_negatives)
+
+    missed_red_hosts = [host for host in appearing_red_hosts if host not in flagged_red_host]
+    with open (outfile, 'a') as writefile:
+        writefile.write('No. of Flagged Users: %i \n' % total_flagged)
+        writefile.write('Total No. of Users: %i \n\n' % total_logs)
+        writefile.write('No. of True Positives: %i \n' % true_positives)
+        writefile.write('No. of False Positives:  %i \n' % false_positives)
+        writefile.write('No. of False Negatives: %i \n' % false_negatives)
+        writefile.write('No. of True Negatives: %i \n\n' % true_negatives)
+        writefile.write('Precision: %f \n' % precision)
+        writefile.write('Recall: %f \n' % recall)
+        writefile.write('F1 Score: %f \n' % f1)
+        writefile.write('True Positive Rate:  %f \n' % true_positive_rate)
+        writefile.write('False Positive Rate: %f \n\n' % false_positive_rate)
+        writefile.write('Flagged red hosts: %s \n' % ','.join(flagged_red_hosts))
+        writefile.write('Flagged non-red hosts: %s \n' % ','.join(flagged_non_red_hosts))
+        writefile.write('Missed red hosts: %s \n' % ','.join(missed_red_hosts))
+    
+    print('No. of Flagged Logs:',total_flagged)
+    print('Total No. of Logs:', total_logs)
+    print('')
+    print('No. of True Positives:',true_positives)
+    print('No. of False Positives:',false_positives)
+    print('No. of False Negatives:',false_negatives)
+    print('No. of True Negatives:',true_negatives)
+    print('')
+    print('Precision:',precision)
+    print('Recall:',recall)
+    print('F1 Score:',f1)
+    print('True Positive Rate:',true_positive_rate)
+    print('False Positive Rate:',false_positive_rate)
+    print('')
+    print('Flagged red hosts: %s \n' % ','.join(flagged_red_hosts))
+    print('Flagged non-red hosts: %s \n' % ','.join(flagged_non_red_hosts))
+    print('Missed red hosts: %s \n' % ','.join(missed_red_hosts))
+
     startdate = end_date_gen(startdate,1)
     testdate = end_date_gen(testdate,1)
     
