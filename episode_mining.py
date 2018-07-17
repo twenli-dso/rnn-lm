@@ -123,7 +123,7 @@ def train_model(x_train, y_train, num_epochs, batch_size):
     
     return parallel_model
 
-startdate = '20160408'
+startdate = '20160409'
 num_training_days = 3
 testdate = end_date_gen(startdate,num_training_days)
 
