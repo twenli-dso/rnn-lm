@@ -260,7 +260,7 @@ while testdate <= '20160502':
     
     #calculate statistics
     appearing_red_hosts = []
-    for user in test_user:
+    for user in test_users:
         for red_host in red_hosts:
             if user == red_host:
                 appearing_red_hosts += [red_host,]
@@ -268,8 +268,8 @@ while testdate <= '20160502':
     total_flagged = len(flagged_red_hosts) + len(flagged_non_red_hosts)
     total_logs = len(x_test)
 
-    false_positives = flagged_non_red_hosts
-    false_negatives = len(appearing_red_hosts)-flagged_red_hosts
+    false_positives = len(flagged_non_red_hosts)
+    false_negatives = len(appearing_red_hosts)-len(flagged_red_hosts)
     true_negatives = total_logs-false_positives
 
     if true_positives+false_positives == 0:
