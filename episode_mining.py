@@ -123,7 +123,7 @@ def train_model(x_train, y_train, num_epochs, batch_size):
     
     return parallel_model
 
-startdate = '20160409'
+startdate = '20160411'
 num_training_days = 3
 testdate = end_date_gen(startdate,num_training_days)
 
@@ -171,7 +171,7 @@ while testdate <= '20160502':
     print("Length of x_train: ", len(x_train))
     
     #train model
-    parallel_model = train_model(x_train, y_train, 5, 512)
+    parallel_model = train_model(x_train, y_train, 3, 256)
     
     #generate test sequences
     sliding_test_sequences = []
