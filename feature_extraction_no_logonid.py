@@ -99,7 +99,7 @@ for url in file_list:
                     if logontypeno == 0:
                         logontype = '?'
 
-                    outfile = './output/data_security_' + str(logtime) + '.txt'
+                    outfile = './output_2/data_security_' + str(logtime) + '.txt'
 
                     with open(outfile,'a') as out:
                         line = str(logtime) + ',' + str(hostname) + ',' + str(accountname) + ',' + str(domain) + ',' + str(eventid) + ',' + str(procname) + ',' + str(logontype) + ',' + str(authpack) + '\n'
