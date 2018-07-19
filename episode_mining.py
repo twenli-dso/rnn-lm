@@ -171,7 +171,7 @@ while testdate <= '20160502':
     print("Length of x_train: ", len(x_train))
     
     #train model
-    parallel_model = train_model(x_train, y_train, 3, 256)
+    parallel_model = train_model(x_train, y_train, 4, 512)
     
     #generate test sequences
     sliding_test_sequences = []
