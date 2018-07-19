@@ -120,8 +120,8 @@ def train_model(x_train, y_train, num_epochs, batch_size):
     model.add(Bidirectional(LSTM(256)))
     model.add(Dense(256, activation = 'relu'))
     model.add(Dense(vocab_size, activation = 'softmax'))
-    #parallel_model = model
-    parallel_model = multi_gpu_model(model, gpus=4)
+    parallel_model = model
+    #parallel_model = multi_gpu_model(model, gpus=4)
     parallel_model.compile(loss = 'sparse_categorical_crossentropy', optimizer = optim, metrics = ['accuracy'])
     parallel_model.fit(x_train, y_train, epochs = num_epochs, verbose = 1, batch_size = batch_size, callbacks = [early_stopping])
     
@@ -176,7 +176,7 @@ while testdate <= '20160502':
     print("Length of x_train: ", len(x_train))
     
     #train model
-    parallel_model = train_model(x_train, y_train, 4, 512)
+    parallel_model = train_model(x_train, y_train, 4, 256)
     
     #generate test sequences
     sliding_test_sequences = []
