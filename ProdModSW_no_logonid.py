@@ -104,7 +104,7 @@ def data_gen(start_date,numdays):
 red_data = load_data('gtruth.txt')
 red = []
 
-startdate = '20160408'
+startdate = '20160410'
 testdate = end_date_gen(startdate,6)
 
 while testdate <= '20160502':
@@ -188,7 +188,7 @@ while testdate <= '20160502':
     config.gpu_options.allow_growth = True
 
     # Only allow a total of half the GPU memory to be allocated
-    config.gpu_options.per_process_gpu_memory_fraction = 0.25
+    config.gpu_options.per_process_gpu_memory_fraction = 0.10
 
     # Create a session with the above options specified.
     k.tensorflow_backend.set_session(tf.Session(config=config))

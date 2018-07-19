@@ -100,7 +100,7 @@ def train_model(x_train, y_train, num_epochs, batch_size):
     config.gpu_options.allow_growth = True
 
     # Only allow a total of half the GPU memory to be allocated
-    config.gpu_options.per_process_gpu_memory_fraction = 0.25
+    config.gpu_options.per_process_gpu_memory_fraction = 0.20
 
     # Create a session with the above options specified.
     k.tensorflow_backend.set_session(tf.Session(config=config))
@@ -123,7 +123,7 @@ def train_model(x_train, y_train, num_epochs, batch_size):
     
     return parallel_model
 
-startdate = '20160411'
+startdate = '20160414'
 num_training_days = 3
 testdate = end_date_gen(startdate,num_training_days)
 
