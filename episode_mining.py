@@ -1,3 +1,7 @@
+import os
+os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"   # see issue #152
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+
 import string
 import itertools
 import math
@@ -123,12 +127,13 @@ def train_model(x_train, y_train, num_epochs, batch_size):
     
     return parallel_model
 
-startdate = '20160414'
+startdate = '20160415'
 num_training_days = 3
 testdate = end_date_gen(startdate,num_training_days)
 
 while testdate <= '20160502':
-    
+    print("Test date: ",testdate)
+
     #load training and testing data (users with sequence of event ids)
     train_data = data_gen(startdate,num_training_days)
     test_data = data_gen(testdate,1)
