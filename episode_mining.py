@@ -104,7 +104,7 @@ def train_model(x_train, y_train, num_epochs, batch_size):
     config.gpu_options.allow_growth = True
 
     # Only allow a total of half the GPU memory to be allocated
-    config.gpu_options.per_process_gpu_memory_fraction = 0.20
+    config.gpu_options.per_process_gpu_memory_fraction = 0.25
 
     # Create a session with the above options specified.
     k.tensorflow_backend.set_session(tf.Session(config=config))
@@ -176,7 +176,7 @@ while testdate <= '20160502':
     print("Length of x_train: ", len(x_train))
     
     #train model
-    parallel_model = train_model(x_train, y_train, 4, 256)
+    parallel_model = train_model(x_train, y_train, 3, 256)
     
     #generate test sequences
     sliding_test_sequences = []
