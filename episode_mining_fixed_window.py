@@ -90,9 +90,9 @@ def data_gen(start_date,numdays):
         i += 1
     return fulldata
 
-def gen_xy(data, min_len, max_num_seq):
-    sequences = seq_gen(data, min_len, max_num_seq)
-    sequences = pad_sequences(sequences, maxlen = max_num_seq, padding = 'pre')
+def gen_xy(data, window_size, max_num_seq):
+    sequences = seq_gen(data, window_size, max_num_seq)
+    sequences = pad_sequences(sequences, maxlen = window_size, padding = 'pre')
     sequences = array(sequences)
     x, y = sequences[:,:-1], sequences[:,-1]
     return x, y
