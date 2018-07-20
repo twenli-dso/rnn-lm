@@ -3,11 +3,10 @@
 
 # In[1]:
 
-'''
+
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"   # see issue #152
-os.environ["CUDA_VISIBLE_DEVICES"] = ""
-'''
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 import string
 import datetime
@@ -99,7 +98,7 @@ def data_gen(start_date,numdays):
         i += 1
     return fulldata
 
-# In[19]:
+# In[19]: 
 
 red_data = load_data('gtruth.txt')
 red = []
