@@ -234,7 +234,7 @@ while testdate <= '20160502':
     flagged_red_hosts = []
     flagged_non_red_hosts = []
 
-    outfile = "./results/flagged_lines.txt"
+    outfile = "./results/fixed_window_results.txt"
     printline = "\n-- STATISTICS FOR " + str(testdate) + " --\n"
     with open (outfile, 'a') as writefile:
         writefile.write(printline + "\n")
