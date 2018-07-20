@@ -6,7 +6,7 @@
 
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"   # see issue #152
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 import string
 import datetime
@@ -187,7 +187,7 @@ while testdate <= '20160502':
     config.gpu_options.allow_growth = True
 
     # Only allow a total of half the GPU memory to be allocated
-    config.gpu_options.per_process_gpu_memory_fraction = 0.10
+    #config.gpu_options.per_process_gpu_memory_fraction = 0.10
 
     # Create a session with the above options specified.
     k.tensorflow_backend.set_session(tf.Session(config=config))
