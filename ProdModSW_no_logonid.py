@@ -103,7 +103,7 @@ def data_gen(start_date,numdays):
 red_data = load_data('gtruth.txt')
 red = []
 
-startdate = '20160415'
+startdate = '20160418'
 testdate = end_date_gen(startdate,6)
 
 while testdate <= '20160502':
@@ -277,10 +277,22 @@ while testdate <= '20160502':
             flagged_host = xline[1]
             if flagged_host in red_hosts:
                 true_positive_hosts += 1
+
+                if flagged_host in red_flagged_dict:
+                    red_flagged_dict[flagged_host] += 1
+                else:
+                    red_flagged_dict[flagged_host] = 1
+
                 if flagged_host not in flagged_red_hosts:
                     flagged_red_hosts += [flagged_host,]
             else:
                 false_positive_hosts += 1
+
+                if flagged_host in non_red_flagged_dict:
+                    non_red_flagged_dict[flagged_host] += 1
+                else:
+                    non_red_flagged_dict[flagged_host] = 1
+
                 if flagged_host not in flagged_non_red_hosts:
                     flagged_non_red_hosts += [flagged_host,]
 
@@ -334,7 +346,9 @@ while testdate <= '20160502':
         writefile.write('True Positive Hosts: %i \n' % true_positive_hosts)
         writefile.write('False Positive Hosts: %i \n' % false_positive_hosts)
         writefile.write('Flagged red hosts: %s \n' % ','.join(flagged_red_hosts))
+        writefile.write('Red flagged dict: ' + str(red_flagged_dict))
         writefile.write('Flagged non-red hosts: %s \n' % ','.join(flagged_non_red_hosts))
+        writefile.write('Non-red flagged dict: ' + str(non_red_flagged_dict))
 
     print('No. of Flagged Logs:',total_flagged)
     print('Total No. of Logs:', total_logs)
@@ -354,6 +368,8 @@ while testdate <= '20160502':
     print('False Positive Hosts:',false_positive_hosts)
     print('Flagged red hosts: %s' % ','.join(flagged_red_hosts))
     print('Flagged non-red hosts: %s \n' % ','.join(flagged_non_red_hosts))
+    print('Red flagged dict: ' + str(red_flagged_dict))
+    print('Non-red flagged dict: ' + str(non_red_flagged_dict))
 
     startdate = end_date_gen(startdate,1)
     testdate = end_date_gen(testdate,1)
