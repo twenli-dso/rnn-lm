@@ -104,7 +104,7 @@ def data_gen(start_date,numdays):
 red_data = load_data('gtruth.txt')
 red = []
 
-startdate = '20160412'
+startdate = '20160415'
 testdate = end_date_gen(startdate,6)
 
 while testdate <= '20160502':
