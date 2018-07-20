@@ -200,8 +200,8 @@ while testdate <= '20160502':
     model.add(Bidirectional(LSTM(256)))
     model.add(Dense(256, activation = 'relu'))
     model.add(Dense(vocab_size, activation = 'softmax'))
-    #parallel_model = model
-    parallel_model = multi_gpu_model(model, gpus=4)
+    parallel_model = model
+    #parallel_model = multi_gpu_model(model, gpus=4)
     parallel_model.compile(loss = 'sparse_categorical_crossentropy', optimizer = optim, metrics = ['accuracy'])
     parallel_model.fit(x_train, y_train, epochs = 3, verbose = 1, batch_size = 128, callbacks = [early_stopping])
 
