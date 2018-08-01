@@ -267,7 +267,7 @@ while testdate <= '20160424':
             if red[count] == '1':
                 true_positives += 1
             with open (outfile, 'a') as writefile:
-                writefile.write('ANOMALY DETECTED:\n')
+                #writefile.write('ANOMALY DETECTED:\n')
             print('ANOMALY DETECTED:')
             xline = []
             for i in x_test[count][-1]:
@@ -299,7 +299,7 @@ while testdate <= '20160424':
                     flagged_non_red_hosts += [flagged_host,]
 
             with open (outfile, 'a') as writefile:
-                writefile.write(' '.join(xline) + '\n')
+                #writefile.write(' '.join(xline) + '\n')
             print(' '.join(xline) + '\n')
             anomalies += 1
         
