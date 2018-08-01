@@ -224,6 +224,7 @@ while testdate <= '20160502':
     false_positive_hosts = 0
     flagged_red_hosts = []
     flagged_non_red_hosts = []
+    red_flagged_dict = {}
     non_red_flagged_dict = {}
 
     print ('Total number of logs to process:',len(x_test))
