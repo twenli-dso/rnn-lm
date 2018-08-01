@@ -266,7 +266,7 @@ while testdate <= '20160424':
         if log_ce[count] > threshold:
             if red[count] == '1':
                 true_positives += 1
-            with open (outfile, 'a') as writefile:
+            #with open (outfile, 'a') as writefile:
                 #writefile.write('ANOMALY DETECTED:\n')
             print('ANOMALY DETECTED:')
             xline = []
@@ -298,7 +298,7 @@ while testdate <= '20160424':
                 if flagged_host not in flagged_non_red_hosts:
                     flagged_non_red_hosts += [flagged_host,]
 
-            with open (outfile, 'a') as writefile:
+            #with open (outfile, 'a') as writefile:
                 #writefile.write(' '.join(xline) + '\n')
             print(' '.join(xline) + '\n')
             anomalies += 1
