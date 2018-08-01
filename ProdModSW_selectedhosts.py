@@ -38,13 +38,13 @@ import tensorflow as tf
 from keras import backend as k
 
 #notinlist = ['20160407','20160410','20160427']
-outfile = "./output/production_results_28hosts.txt"
+outfile = "./output/production_results_tophosts.txt"
 # In[16]:
 
 red_hosts = ["T029-787","TLM83-15005823","DE5450-15006304","LX250-15006650","LX250-15006668",'VM-CSL-01', 'VM-CSL-02', 'VM-CSL-03']
 
 def load_data(filename):
-    selected_hosts = ["T029-787","TLM83-15005823","DE5450-15006304","LX250-15006650","LX250-15006668",'VM-CSL-01', 'VM-CSL-02', 'VM-CSL-03',"TLM83-15005832","LX250-15006645", "DE5450-15006348","LX250-15006652","TLM83-15005825", "DE5450-15006348", "TLM83-15005832","DE5440-008388","LX250-15006643","VM-CSL-04","T029-787","T062-253","DE5450-15006328","T062-112","LX240-017709","TLM93P-14014354","TLM83-15005840","T029-205","LX250-15006657","TLM83-15005829"]
+    selected_hosts = ['DE5450-15006304', 'VM-CSL-07', 'TLM93P-14014366', 'VM-CSL-10', 'TLM83-15005825', 'VM-CSL-03', 'DE5440-008388', 'VM-CSL-05', 'VM-CSL-11', 'TLM93P-14014370', 'T029-787', 'VM-CSL-01', 'VM-CSL-09', 'T029-449', 'VM-CSL-08', 'TLM83-15005832', 'TLM72-016266', 'VM-CSL-06', 'DE5450-15006348', 'VM-WIN7-03', 'VM-CSL-12', 'VM-CSL-02', 'VM-CSL-04', 'TLM72-016270', 'VM-WIN7-04', 'TLM83-15005823','LX250-15006650','LX250-15006668']
 
     total = []
     
@@ -104,8 +104,8 @@ def data_gen(start_date,numdays):
 red_data = load_data('gtruth.txt')
 red = []
 
-startdate = '20160414'
-testdate = end_date_gen(startdate,3)
+startdate = '20160408'
+testdate = end_date_gen(startdate,6)
 
 while testdate <= '20160502':
 

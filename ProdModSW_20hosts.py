@@ -44,7 +44,7 @@ outfile = "./output/production_results_21hosts_updated.txt"
 red_hosts = ["T029-787","TLM83-15005823","DE5450-15006304","LX250-15006650","LX250-15006668",'VM-CSL-01', 'VM-CSL-02', 'VM-CSL-03']
 
 def load_data(filename):
-    twenty_hosts = ["T029-787","TLM83-15005823","DE5450-15006304","LX250-15006650","LX250-15006668",'VM-CSL-01', 'VM-CSL-02', 'VM-CSL-03',"TLM83-15005832","LX250-15006645", "DE5450-15006348","LX250-15006652","TLM83-15005825", "DE5450-15006348", "TLM83-15005832","DE5440-008388","LX250-15006643","VM-CSL-04","T029-787","T062-253","DE5450-15006328"]
+    selected_hosts = ["T029-787","TLM83-15005823","DE5450-15006304","LX250-15006650","LX250-15006668",'VM-CSL-01', 'VM-CSL-02', 'VM-CSL-03',"TLM83-15005832","LX250-15006645", "DE5450-15006348","LX250-15006652","TLM83-15005825", "DE5450-15006348", "TLM83-15005832","DE5440-008388","LX250-15006643","VM-CSL-04","T029-787","T062-253","DE5450-15006328","T062-112","LX240-017709","TLM93P-14014354","TLM83-15005840","T029-205","LX250-15006657","TLM83-15005829"]
 
     total = []
     
@@ -59,7 +59,7 @@ def load_data(filename):
         i = i.split(',')
         if i[0] == '':
             continue
-        if i[1] in twenty_hosts:
+        if i[1] in selected_hosts:
             total += [i,]
     return total
 
@@ -353,7 +353,7 @@ while testdate <= '20160502':
     print('')
     print('True Positive Hosts:',true_positive_hosts)
     print('False Positive Hosts:',false_positive_hosts)
-    print('Flagged red hosts: %s \n' % ','.join(flagged_red_hosts))
+    print('Flagged red hosts: %s' % ','.join(flagged_red_hosts))
     print('Flagged non-red hosts: %s \n' % ','.join(flagged_non_red_hosts))
 
     startdate = end_date_gen(startdate,1)
