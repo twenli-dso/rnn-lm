@@ -170,7 +170,7 @@ while testdate <= '20160502':
     print("Avg number of event ids per user per day: ", avg_len)
     
     max_len = int(avg_len)
-    window_size = 10 #min sequence length for sliding window, not sure how to decide
+    window_size = 5 #min sequence length for sliding window, not sure how to decide
 
     #generate training sequences with sliding window
     x_train, y_train = gen_xy(train_sequences, window_size, max_len)
@@ -234,7 +234,7 @@ while testdate <= '20160502':
     flagged_red_hosts = []
     flagged_non_red_hosts = []
 
-    outfile = "./results/fixed_window_results.txt"
+    outfile = "./results/window_size_5_results.txt"
     printline = "\n-- STATISTICS FOR " + str(testdate) + " --\n"
     with open (outfile, 'a') as writefile:
         writefile.write(printline + "\n")
@@ -248,8 +248,15 @@ while testdate <= '20160502':
             else:
                 flagged_non_red_hosts += [user,]
 
+            #find token with highest loss
+            maxpos = np.argmax(log_ce)
+            max_loss_token_index = y_test[count][maxpos]
+            max_loss_token = str(reverse_word_map[max_loss_token_index])
+            #print("max_loss_token:",max_loss_token)
+            #print(x_test[count][maxpos])
+                
             xline = []
-            for i in x_test[count][-1]:
+            for i in x_test[count][maxpos]:
                 try:
                     xline += [str(reverse_word_map[i]),]
                 except KeyError:
@@ -257,11 +264,13 @@ while testdate <= '20160502':
 
             with open (outfile, 'a') as writefile:
                 writefile.write('ANOMALY DETECTED:\n')
-                writefile.write('User:%s\n'%(user))
-                writefile.write(' '.join(xline) + '\n')
+                writefile.write('User:%s'%(user))
+                writefile.write(' '.join(xline))
+                writefile.write("Next token: " + max_loss_token + "\n")
             print('ANOMALY DETECTED:')
-            print('User:%s\n'%(user))
-            print(' '.join(xline) + '\n')
+            print('User:%s'%(user))
+            print(' '.join(xline))
+            print("Next token:" + max_loss_token + "\n")
     
     #calculate statistics
     appearing_red_hosts = []
