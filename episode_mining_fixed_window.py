@@ -170,7 +170,7 @@ while testdate <= '20160502':
     print("Avg number of event ids per user per day: ", avg_len)
     
     max_len = int(avg_len)
-    window_size = 5 #min sequence length for sliding window, not sure how to decide
+    window_size = 15 #min sequence length for sliding window, not sure how to decide
 
     #generate training sequences with sliding window
     x_train, y_train = gen_xy(train_sequences, window_size, max_len)
@@ -264,8 +264,8 @@ while testdate <= '20160502':
 
             with open (outfile, 'a') as writefile:
                 writefile.write('ANOMALY DETECTED:\n')
-                writefile.write('User:%s'%(user))
-                writefile.write(' '.join(xline))
+                writefile.write('User:%s\n'%(user))
+                writefile.write(' '.join(xline) + "\n")
                 writefile.write("Next token: " + max_loss_token + "\n")
             print('ANOMALY DETECTED:')
             print('User:%s'%(user))
